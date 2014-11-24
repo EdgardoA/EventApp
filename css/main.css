@@ -9,16 +9,11 @@
 	float: right;
 }
 
-#nav-buttons {
-	padding-left: 10px;
-	color: white;
-}
-
 li {
 	display: inline;
 }
 
-a:link {
+ul.nav-buttons {
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
