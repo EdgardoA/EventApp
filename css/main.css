@@ -11,8 +11,8 @@
 
 li {
 	display: inline;
-	display: list-item;
 	border-right: 1px solid white;
+	padding: 0 20px;
 }
 
 ul.nav-buttons {
