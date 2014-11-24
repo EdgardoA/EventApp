@@ -12,11 +12,11 @@
 li {
 	display: inline;
 	display: list-item;
+	border-right: 1px solid white;
 }
 
 ul.nav-buttons {
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	border-right: 1px solid white;
 }
