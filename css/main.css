@@ -5,7 +5,7 @@
 
 .nav-menu {
 	display: inline-block;
-	margin: 25px 20px 70px 70px;
+	margin: 25px 20px;
 	float: right;
 }
 
@@ -35,4 +35,6 @@ li.signIn-button {
 	padding: 0 20px;
 }
 
-
+.panel {
+	background: #595959;
+}
