@@ -5,14 +5,10 @@
 
 .nav-menu {
 	text-align: right;
-	display: block;
-}
-
-.li {
-	display: list-item;
+	display: inline-block;
 }
 
 #nav-buttons {
-	display: inline;
+	text-decoration: none;
+	color: white;
 }
-
