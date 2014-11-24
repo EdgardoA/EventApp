@@ -9,6 +9,15 @@
 	float: right;
 }
 
+a {
+	color: white;
+}
+
+ul.nav-buttons {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
 li.home-button {
 	display: inline;
 	border-right: 1px solid white;
@@ -26,8 +35,4 @@ li.singIn-button {
 	padding: 0 20px;
 }
 
-ul.nav-buttons {
-	text-decoration: none;
-	color: white;
-	text-transform: uppercase;
-}
+
