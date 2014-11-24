@@ -4,11 +4,14 @@
 }
 
 .nav-menu {
-	text-align: right;
 	display: inline-block;
 }
 
-.li {
+.nav-buttons {
+	text-align: right;
+}
+
+li {
 	text-decoration: none;
 	color: white;
 	display: inline;
