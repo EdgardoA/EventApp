@@ -4,5 +4,6 @@
 }
 
 .nav-menu {
-	align: right;
+	display: inline-block;
+	text-align: right;
 }
