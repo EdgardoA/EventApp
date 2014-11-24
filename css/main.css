@@ -10,11 +10,16 @@
 }
 
 #nav-buttons {
-	margin-left: 10px;
+	padding-left: 10px;
+	color: white;
 }
 
 li {
+	display: inline;
+}
+
+a:link {
 	text-decoration: none;
 	color: white;
-	display: inline;
+	text-transform: uppercase;
 }
