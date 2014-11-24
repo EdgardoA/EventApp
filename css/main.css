@@ -5,10 +5,12 @@
 
 .nav-menu {
 	display: inline-block;
+	margin: 25px 20px 70px 70px;
+	float: right;
 }
 
 #nav-buttons {
-	text-align: right;
+	margin-left: 10px;
 }
 
 li {
