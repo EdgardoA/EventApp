@@ -39,9 +39,9 @@ li.signIn-button {
 	color: #6e2556 !important;
 }
 
-.small-radius-button {
+button.small {
 	float: center;
 	text-transform: uppercase;
 	color: white;
-	background-color: #6e2556;
+	background-color: #6e2556 !important;
 }
