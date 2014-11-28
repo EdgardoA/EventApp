@@ -38,3 +38,10 @@ li.signIn-button {
 .info-header {
 	color: #6e2556 !important;
 }
+
+.small-radius-button {
+	float: center;
+	text-transform: uppercase;
+	color: white;
+	background-color: #6e2556;
+}
