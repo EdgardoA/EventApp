@@ -39,7 +39,7 @@ li.signIn-button {
 	color: #6e2556 !important;
 }
 
-button {
+.button.small {
 	float: center;
 	text-transform: uppercase;
 	color: white;
