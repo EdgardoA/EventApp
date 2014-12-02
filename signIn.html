@@ -37,6 +37,13 @@
     	data-scope="https://www.googleapis.com/auth/plus.login">
   		</span>
 		</span>
+    
+    <p>Log in via Facebook.</p><br/>
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
       	</div>
       </div>
     </div>
@@ -130,18 +137,8 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-<div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <p>Log in via Google.</p><br/>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-        </div>
-      </div>
-    </div>
 
-<div id="status">
-</div>
+
 
 	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
 
