@@ -23,6 +23,21 @@
       </div>
     </div>
 	
+//GOOGLE LOGIN	
+	<!-- The top of file index.html -->
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+  <!-- BEGIN Pre-requisites -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+  <script src=""https://apis.google.com/js/client:platform.js?onload=start" async defer>
+  </script>
+  <!-- END Pre-requisites -->
+</head>
+<!-- ... -->
+</html>
+
+	
 	<div class="row">
       <div class="large-12 columns">
       	<div class="panel">
@@ -51,8 +66,17 @@
     </div>
   </div>
 
+<<<<<<< Updated upstream
   <div class="boxed" style = " width:1028px; height:500px;  position: absolute; bottom: 30px " >
   </div>
+=======
+<<<<<<< Updated upstream
+=======
+	<div class="boxed">
+			This text is enclosed in a box.
+	<div>
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
   <script>
   // This is called with the results from from FB.getLoginStatus().
@@ -143,7 +167,6 @@
 
 
 
-	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
 
   <script>
   window.fbAsyncInit = function() {
@@ -162,6 +185,49 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+//GOOGLE+ SIGN IN
+
+<!-- Last part of BODY element in file index.html -->
+<script>
+function signInCallback(authResult) {
+  if (authResult['code']) {
+
+    // Hide the sign-in button now that the user is authorized, for example:
+    $('#signinButton').attr('style', 'display: none');
+
+    // Send the code to the server
+    $.ajax({
+      type: 'POST',
+      url: 'plus.php?storeToken',
+      contentType: 'application/octet-stream; charset=utf-8',
+      success: function(result) {
+        // Handle or verify the server response if necessary.
+
+        // Prints the list of people that the user has allowed the app to know
+        // to the console.
+        console.log(result);
+        if (result['profile'] && result['people']){
+          $('#results').html('Hello ' + result['profile']['displayName'] + '. You successfully made a server side call to people.get and people.list');
+        } else {
+          $('#results').html('Failed to make a server-side call. Check your configuration and console.');
+        }
+      },
+      processData: false,
+      data: authResult['code']
+    });
+  } else if (authResult['error']) {
+    // There was an error.
+    // Possible error codes:
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatially log in the user
+    // console.log('There was an error: ' + authResult['error']);
+  }
+}
+</script>
+
+	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
