@@ -39,138 +39,125 @@
 <form>
   <!-- Data Entry -->	
   <div class="row">
+    <div class="large-8 large-centered columns">
+     <label>Event Name</label>
+     <input type="text" placeholder="Enter Event Name Here..." />
+    </div>
+  </div>
+
+  <div class="row">
    <div class="large-8 large-centered columns">
-    <label>Event Name</label>
-    <input type="text" placeholder="Enter Event Name Here..." />
-  </div>
+    <label>Event Date</label>
+    <input type="date">
+
+    <div class="large-6 columns time">
+      <label>Event Start Time
+        <input type="time" /></label>
+    </div>
+    <div class="large-6 columns time">
+      <label>Event End Time
+        <input type="time" /></label>
+    </div>
+  </div>				
 </div>
 
 <div class="row">
- <div class="large-8 large-centered columns">
-  <label>Event Date</label>
-  <input type="date">
-  
-  <div class="large-6 columns time">
-    <label>Event Start Time
-      <input type="time" />
-    </label>
+  <div class="large-8 large-centered columns">
+    <label>Event Location</label>
+    <input id ="pac-input"; type="text"; />
   </div>
-  <div class="large-6 columns time">
-    <label>Event End Time
-      <input type="time" />
-    </label>
-  </div>
-</div>				
-</div>
 
-<div class="row">
- <div class="large-8 large-centered columns">
-  <label>Event Location</label>
-  <input id ="pac-input"; type="text"; />
-</div>
-<script>
-var myCenter = new google.maps.LatLng(51.508742, -0.120850);
+  <script>
+    var myCenter = new google.maps.LatLng(51.508742, -0.120850);
 
-function initialize()
-{
+    function initialize()
+    {
 
-  var Payment_Amount = 100;
-  var mapProp = {
-    center:myCenter,
-    zoom:9,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-    
-  //mapTypeId:google.maps.MapTypeId.HYBRID
-  //mapTypeId:google.maps.MapTypeId.SATELLITE
-  //mapTypeId:google.maps.MapTypeId.HYBRID
-  //mapTypeId:google.maps.MapTypeId.TERRAIN
-};
-var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
+      var Payment_Amount = 100;
+      var mapProp = {
+        center:myCenter,
+        zoom:9,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
 
-//Icon Image
-var marker = new google.maps.Marker({position:myCenter,icon:'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png'});
+      //mapTypeId:google.maps.MapTypeId.HYBRID
+      //mapTypeId:google.maps.MapTypeId.SATELLITE
+      //mapTypeId:google.maps.MapTypeId.HYBRID
+      //mapTypeId:google.maps.MapTypeId.TERRAIN
+    };
+    var map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
+    //Icon Image
+    var marker = new google.maps.Marker({position:myCenter,icon:'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png'});
+    marker.setMap(map);
 
-marker.setMap(map);
+    //Marker-Icon Image
+    var infowindow = new google.maps.InfoWindow({content:"We can put info of the event here as well!"});
+    infowindow.open(map,marker);
 
-//Marker-Icon Image
-var infowindow = new google.maps.InfoWindow({content:"We can put info of the event here as well!"});
-infowindow.open(map,marker);
+    //Info Window that opens when clicking on marker
+    //var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker"});
+    var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker"}); // background-color = #B2D1FF, max-width = 80, max-height = 120}
 
-//Info Window that opens when clicking on marker
+    //Open on click
+    google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
 
-//var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker"});
+    //Search Box
+    var markers = [];
+    var input =(document.getElementById('pac-input'));
 
-var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker"}); // background-color = #B2D1FF, max-width = 80, max-height = 120}
+    var searchBox = new google.maps.places.SearchBox((input));
 
-//Open on click
+    google.maps.event.addListener(searchBox, 'places_changed', function() {
+      var places = searchBox.getPlaces();
 
-google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
+      if (places.length == 0) {
+        return;
+      }
+      for (var i = 0, marker; marker = markers[i]; i++) {
+        marker.setMap(null);
+      }
 
+        // For each place, get the icon, place name, and location.
+        markers = [];
+        var bounds = new google.maps.LatLngBounds();
+        for (var i = 0, place; place = places[i]; i++) {
+          var image = {
+            url: place.icon,
+            size: new google.maps.Size(24, 24),
+            origin: new google.maps.Point(20, 20),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+          };
 
-//Search Box
+          // Create a marker for each place.
+          var marker = new google.maps.Marker({
+            map: map,
+            icon: 'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png',  // image
+            title: place.name,
+            position: place.geometry.location
+          });
 
-var markers = [];
-var input =(document.getElementById('pac-input'));
+          markers.push(marker);
+          bounds.extend(place.geometry.location);
+          zoom: 9;
+        }
 
-var searchBox = new google.maps.places.SearchBox((input));
-
-google.maps.event.addListener(searchBox, 'places_changed', function() {
-  var places = searchBox.getPlaces();
-
-  if (places.length == 0) {
-    return;
-  }
-  for (var i = 0, marker; marker = markers[i]; i++) {
-    marker.setMap(null);
-  }
-
-    // For each place, get the icon, place name, and location.
-    markers = [];
-    var bounds = new google.maps.LatLngBounds();
-    for (var i = 0, place; place = places[i]; i++) {
-      var image = {
-        url: place.icon,
-        size: new google.maps.Size(24, 24),
-        origin: new google.maps.Point(20, 20),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
-
-      // Create a marker for each place.
-      var marker = new google.maps.Marker({
-        map: map,
-        icon: 'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png',  // image
-        title: place.name,
-        position: place.geometry.location
+        map.fitBounds(bounds);
       });
 
-      markers.push(marker);
+      // Bias the SearchBox results towards places that are within the bounds of the
+      // current map's viewport.
+      google.maps.event.addListener(map, 'bounds_changed', function() {
+        var bounds = map.getBounds();
+        searchBox.setBounds(bounds);
+      });
 
-      bounds.extend(place.geometry.location);
-      zoom: 9;
     }
-
-    map.fitBounds(bounds);
-  });
-
-  // Bias the SearchBox results towards places that are within the bounds of the
-  // current map's viewport.
-  google.maps.event.addListener(map, 'bounds_changed', function() {
-    var bounds = map.getBounds();
-    searchBox.setBounds(bounds);
-  });
-
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </head>
-<div id="googleMap" style="width:50%;height:500px; position: relative; left: 180px;"></div>
+  <div id="googleMap" style="width:50%;height:500px; position: relative; left: 180px;"></div>
 </div>
-
-</div>
-
 </form>
 
 <!-- Donation Radio Button -->	
@@ -184,7 +171,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <!-- Buttons -->	  
 <div class="row">
- 
+
  <ul class="small-block-grid-6">
   <li><button href="#" class="small button" data-reveal-id="inviteModal">Invite</button>
     <div id="inviteModal" class="reveal-modal" data-reveal>
@@ -193,26 +180,22 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <div class="large-12 columns">
         <div class="panel">
           <p>Log in via Google.</p>
-          
           <span id="signinButton">
             <span
-            class="g-signin"
-            data-callback="signinCallback"
-            data-clientid="CLIENT_ID"
-            data-cookiepolicy="single_host_origin"
-            data-requestvisibleactions="http://schema.org/AddAction"
-            data-scope="https://www.googleapis.com/auth/plus.login">
+              class="g-signin"
+              data-callback="signinCallback"
+              data-clientid="CLIENT_ID"
+              data-cookiepolicy="single_host_origin"
+              data-requestvisibleactions="http://schema.org/AddAction"
+              data-scope="https://www.googleapis.com/auth/plus.login">
+            </span>
           </span>
-        </span>
-        
-        <p>Log in via Facebook.</p>
 
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-      </fb:login-button>
+        <p>Log in via Facebook.</p>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
 
       <div id="status">
       </div>
-
     </div>
   </div>
 </div>
@@ -336,7 +319,7 @@ window.fbAsyncInit = function() {
    <p>Tweet promoting event...</p>
    <a class="close-reveal-modal">&#215;</a>
  </div>
- 
+
 </li>
 
 <li><input type="reset" class="small button" value="Clear" /></li>
