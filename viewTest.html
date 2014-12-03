@@ -30,7 +30,7 @@
 	var eventName;
 	var eventTime;
 	var eventLocation;
-	<?php
+	//<?php
 		$input = fopen("eventInfo.txt", "r") or die("Unable to open file!");
 		// Output one line until end-of-file
 			//while(!feof($input)) {
@@ -39,7 +39,7 @@
 				eventLocation =  fgets($input);
 		}
 		fclose($myfile);
-	?>
+	//?>
 	
 	document.getElementById("eventNameText").value = eventName;
 		document.getElementById("eventNameText1").innerHTML = eventName;
