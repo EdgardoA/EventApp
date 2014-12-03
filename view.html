@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventUs</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+    
+	<div class="header">
+      <a href="http://edgardoa.github.io/EventApp/"> 
+        <img src="https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/EventUs-NewLogo.png">
+      </a>
+      <div class="nav-menu">
+        <ul class="nav-buttons">
+          <li class="home-button"><a href=#>Home</a></li>
+          <li class="about-button"><a href="http://edgardoa.github.io/EventApp/About">About</a></li>
+          <li class="signIn-button"><a href="http://edgardoa.github.io/EventApp/signIn">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+	
+    <div class="row">
+      <div class="large-12 columns">
+      	<div class="panel">
+	        <h2>View Event</h2>
+	        <p>View the event you were invited to</p>
+      	</div>
+      </div>
+    </div>
+    
+	<form>
+		<!-- Data Entry -->	
+		<div class="row">
+			<div class="large-12 columns">
+				<label>Event Name</label>
+				<input type="text" placeholder="Enter Event Name Here..." />
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="large-12 columns">
+				<label>Event Date</label>
+				<input type="date">
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="large-12 columns">
+				<label>Event Location</label>
+				<input type="text" placeholder="Enter Event Address Here..." />
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<!-- Map Code -->	
+		<div class="panel">
+			<h4>Map Code</h4>
+		</div>
+				  
+		<!-- Donation Radio Button & Slider -->	
+		<div class="row">
+			<div class="large-6 medium-6 columns">
+				<label>This event accepts donations</label>
+				<input type="radio" name="donation" value="Yes" id="donationYes"><label for="donationYes">Yes</label>
+				<input type="radio" name="donation" value="No" id="donationYes"><label for="donationNo">No</label>
+			</div>
+			
+			<div class="range-slider" data-slider data-options="step: 20;">
+  				<span class="range-slider-handle" role="slider" tabindex="0"></span>
+  				<span class="range-slider-active-segment"></span>
+  				<input type="hidden">
+			</div>
+
+		</div>
+				  
+		<!-- Buttons -->	  
+		<div class="row">
+			
+			<ul class="small-block-grid-2">
+  				<li><a href="#" class="medium alert button">Cancel</a></li>
+  				<li><a href="#" class="medium success button">Accept Changes</a></li>
+			</ul>
+			
+			
+			
+		</div>
+
+		</form>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/foundation/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
