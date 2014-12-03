@@ -24,12 +24,6 @@ li.home-button {
 	padding: 0 20px;
 }
 
-li.about-button {
-	display: inline;
-	border-right: 1px solid white;
-	padding: 0 20px;
-}
-
 li.create-button {
 	display: inline;
 	border-right: 1px solid white;
@@ -61,7 +55,14 @@ li.signIn-button {
 	background-image: url(https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/Rings.png);
 }
 
-.small-4.columns.time {
-	text-align: center;
-	margin: 25px 20px;
+.about-button {
+	display: inline;
+	border-right: 1px solid white;
+	padding: 0 20px;
 }
+
+.footer {
+	background: #6e2556;
+	margin-bottom: 20px;
+}
+
