@@ -40,11 +40,12 @@ li.signIn-button {
 }
 
 .button.small {
-	float: center;
 	text-transform: uppercase;
 	color: white;
 	background-color: #6e2556 !important;
+	text-align: center;
 }
+
 .boxed {
 	 background-image: url("https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/people.jpg");
 }
