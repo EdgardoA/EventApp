@@ -170,7 +170,9 @@
 
                 type: "GET",
                 url: "https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/eventInfo.php",
-                data: 'ip=' + $('#searchip').val(),
+                data: 'eventName=' + $('#searchip').val(),
+				data: 'eventTime=' + $('#searchip').val(),
+				data: 'eventLocation=' + $('#searchip').val(),
 				success: function(msg){
                     $('#resultip').html(msg);
                 }
