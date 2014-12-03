@@ -61,3 +61,8 @@ li.signIn-button {
 	text-transform: uppercase;
 	color: #6e2556;
 }
+
+.small-4.columns.time {
+	text-align: center;
+	margin: 25px 20px;
+}
