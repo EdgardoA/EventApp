@@ -51,12 +51,16 @@ li.signIn-button {
 }
 
 .ringsIcon {
-	
 	background-image: url(https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/Rings.png);
 }
 
 .about-button {
 	text-align: center;
+}
+
+.medium-3.columns.bio {
+	text-transform: uppercase;
+	color: #6e2556;
 }
 
 .footer {
