@@ -14,17 +14,18 @@
   </head>
     
 	<div class="header">
-      <a href="http://edgardoa.github.io/EventApp/"> 
-        <img src="https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/EventUs-NewLogo.png">
-      </a>
-      <div class="nav-menu">
-        <ul class="nav-buttons">
-          <li class="home-button"><a href="http://edgardoa.github.io/EventApp/">Home</a></li>
-          <li class="about-button"><a href="http://edgardoa.github.io/EventApp/About">About</a></li>
-          <li class="signIn-button"><a href="http://edgardoa.github.io/EventApp/signIn">Sign In</a></li>
-        </ul>
-      </div>
+    <a href="http://edgardoa.github.io/EventApp/"> 
+      <img src="https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/EventUs-NewLogo.png">
+    </a>
+    <div class="nav-menu">
+      <ul class="nav-buttons">
+        <li class="home-button"><a href="http://edgardoa.github.io/EventApp/">Home</a></li>
+        <li class="about-button"><a href="http://edgardoa.github.io/EventApp/About">About</a></li>
+        <li class="create-button"><a href=#>Create</a></li>
+        <li class="signIn-button"><a href="http://edgardoa.github.io/EventApp/signIn">Sign In</a></li>
+      </ul>
     </div>
+  </div>
 	
     <div class="row">
       <div class="large-8 large-centered columns">
@@ -49,12 +50,12 @@
 				<label>Event Date</label>
 				<input type="date">
 		
-			<div class="large-7 columns time">
+			<div class="large-6 columns time">
 				<label>Event Start Time
 				<input type="time" />
 				</label>
 			</div>
-			<div class="large-7 columns time">
+			<div class="large-6 columns time">
 				<label>Event End Time
 				<input type="time" />
 				</label>
@@ -185,18 +186,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		<div class="row">
 			
 			<ul class="small-block-grid-6">
-  				<li><a href="#" class="small button">Invite</a></li>
-
-  				<li>
-
-  					<button class="small button" data-reveal-id="myModal" > Promote </button>
-						
+  				<li><button href="#" class="small button" data-reveal-id="inviteModal">Invite</button>
+            <div id="inviteModal" class="reveal-modal" data-reveal>
+             <h2>Login to invite your friends!</h2>
+             <p>Tweet promoting event...</p>
+             <a class="close-reveal-modal">&#215;</a>
+            </div>
+          </li>
+  				<li><button class="small button" data-reveal-id="myModal">Promote</button>
 					<div id="myModal" class="reveal-modal" data-reveal>
 					  <h2>Create Promotional Tweet</h2>
 					  <p>Tweet promoting event...</p>
 					  <a class="close-reveal-modal">&#215;</a>
 					</div>
-					
 					
   				</li>
   					  
@@ -207,10 +209,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   				<li><a href="signin.html" class="medium alert button">Cancel</a></li>
   				
   				<li><a href="user.html" class="medium success button">Create</a></li>
-			</ul>
-			
-			
-			
+			</ul>	
 		</div>
 
 
