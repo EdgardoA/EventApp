@@ -54,7 +54,7 @@
 		<div class="row">
 			<div class="large-12 columns">
 				<label>Event Location</label>
-				<input id ="pac-input"; type="text"; style="position: relative; left: 50px; top: 250px" />
+				<input id ="pac-input"; type="text"; />
 			</div>
 			<script>
 var myCenter = new google.maps.LatLng(51.508742, -0.120850);
@@ -136,7 +136,7 @@ var searchBox = new google.maps.places.SearchBox((input));
       markers.push(marker);
 
       bounds.extend(place.geometry.location);
-	  zoom:5;
+	  zoom:7;
     }
 
     map.fitBounds(bounds);
