@@ -21,6 +21,11 @@
         </ul>
       </div>
     </div>
+	
+    <div class="row">
+      <div class="large-12 columns">
+		<input type="text" id="eventNameText" />
+			<div id="eventNameText1"></div>
 	<script>
 	var eventName;
 	var eventTime;
@@ -35,10 +40,11 @@
 		}
 		fclose($myfile);
 	?>
-	</script>
 	
-    <div class="row">
-      <div class="large-12 columns">
+	document.getElementById("eventNameText").value = eventName;
+		document.getElementById("eventNameText1").innerHTML = eventName;
+	</script>
+		
       	<div class="panel">
 	        <h2>View Event</h2>
 	        <p>View the event you were invited to</p>
