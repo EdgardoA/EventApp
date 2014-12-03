@@ -77,14 +77,17 @@
 				</div>
 
 				<div class="small-6 columns">
-					<a href="http://edgardoa.github.io/EventApp/" class="small-6 button">Submit Payment</a>
+					<a href="http://edgardoa.github.io/EventApp/" class="button prefix">Submit Payment</a>
 				</div>
 			</div>
 		</form>
     </div>
     
 	<script>
-		$('.active form').card({ container: $('.card-wrapper') });
+		$('.active form').card({
+			container: $('.card-wrapper'),
+			width: 400
+		});
 	</script>
 	
   </body>
