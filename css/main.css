@@ -46,6 +46,11 @@ li.logIn-button {
 	text-align: center;
 }
 
+#create {
+	padding: 20px 200px;
+	margin-left: 240px;
+}
+
 .boxed {
 	 background-image: url("https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/people.jpg");
 }
