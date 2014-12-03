@@ -49,3 +49,9 @@ li.signIn-button {
 .boxed {
 	 background-image: url("https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/people.jpg");
 }
+
+.maptest {
+	 position: relative;
+	 left: 200px;
+	 width: 50px:
+}
