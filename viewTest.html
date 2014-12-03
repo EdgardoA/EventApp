@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/vendor/modernizr.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   </head>
     
 	<div class="header">
@@ -45,7 +46,7 @@
 	document.getElementById("eventNameText").value = eventName;
 		document.getElementById("eventNameText1").innerHTML = eventName;*/
 
-function showUser(str) {
+/*function showUser(str) {
     if (str == "") {
         document.getElementById("txtHint").innerHTML = "";
         return;
@@ -65,14 +66,14 @@ function showUser(str) {
         xmlhttp.open("GET","https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/eventInfo.php?q="+str,true);
         xmlhttp.send();
     }
-}
+}*/
 		
 		
 		
 	</script>
 
-	
-<body onload="showUser(2)">
+	<input type="text" id="searchip">
+	<div id="resultip"></div>
 	
       	<div class="panel">
 	        <h2>View Event</h2>
@@ -161,5 +162,22 @@ function showUser(str) {
     <script>
       $(document).foundation();
     </script>
+	
+<script>
+    $(document).ready(function() {
+        $('#searchip').change(function(){
+            $.ajax({
+
+                type: "GET",
+                url: "https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/eventInfo.php",
+                data: 'ip=' + $('#searchip').val(),
+				success: function(msg){
+                    $('#resultip').html(msg);
+                }
+
+            }); // Ajax Call
+        }); //event handler
+    }); //document.ready
+</script>
   </body>
 </html>
