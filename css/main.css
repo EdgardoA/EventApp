@@ -13,6 +13,14 @@ a:link {
 	color: white;
 }
 
+a:visited {
+	color: white;
+}
+
+a:hover {
+	color: gray;
+}
+
 ul.nav-buttons {
 	text-decoration: none;
 	text-transform: uppercase;
