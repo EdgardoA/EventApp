@@ -43,7 +43,7 @@ li.signIn-button {
 	text-transform: uppercase;
 	color: white;
 	background-color: #6e2556 !important;
-	margin: auto;
+	text-align: center;
 }
 
 .boxed {
