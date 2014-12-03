@@ -172,7 +172,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		
 		</form>
 				  
-		<!-- Donation Radio Button & Slider -->	
+		<!-- Donation Radio Button -->	
 		<div class="row">
 			<div class="large-6 large-centered medium-6 medium-centered columns">
 				<label>Accept Donations</label>
@@ -180,7 +180,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 				<input type="radio" name="donation" value="No" id="donationYes"><label for="donationNo">No</label>
 			</div>
 		</div>
-				  
+		
 		<!-- Buttons -->	  
 		<div class="row">
 			
@@ -188,15 +188,18 @@ google.maps.event.addDomListener(window, 'load', initialize);
   				<li><a href="#" class="small button">Invite</a></li>
 
   				<li>
-					<a href="#" class="small button" data-reveal-id="myModal">Promote</a>
 
+  					<button class="small button" data-reveal-id="myModal" > Promote </button>
+						
 					<div id="myModal" class="reveal-modal" data-reveal>
 					  <h2>Create Promotional Tweet</h2>
-					  <p>Still programing this part - Eddie</p>
+					  <p>Tweet promoting event...</p>
 					  <a class="close-reveal-modal">&#215;</a>
 					</div>
+					
+					
   				</li>
-  				
+  					  
   				<li><input type="reset" class="small button" value="Clear" /></li>
   				
   				<li><a href="#" class="small button">Add Photo</a></li>
@@ -216,8 +219,10 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <script src="js/foundation.min.js"></script>
     <script src="js/foundation/foundation.js"></script>
  	<script src="js/foundation/foundation.reveal.js"></script>
+    
     <script>
       $(document).foundation();
     </script>
+       
   </body>
 </html>
