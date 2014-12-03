@@ -56,13 +56,12 @@ li.signIn-button {
 }
 
 .about-button {
-	display: inline;
-	border-right: 1px solid white;
-	padding: 0 20px;
+	text-align: center;
 }
 
 .footer {
 	background: #6e2556;
-	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 15px;
 }
 
