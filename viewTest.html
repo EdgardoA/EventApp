@@ -30,8 +30,8 @@
 	var eventName;
 	var eventTime;
 	var eventLocation;
-	</script>
-	<?php
+
+	/*<?php
 		$input = fopen("eventInfo.txt", "r") or die("Unable to open file!");
 		// Output one line until end-of-file
 			//while(!feof($input)) {
@@ -41,9 +41,34 @@
 		}
 		fclose($myfile);
 	?>
-	<script>
+
 	document.getElementById("eventNameText").value = eventName;
-		document.getElementById("eventNameText1").innerHTML = eventName;
+		document.getElementById("eventNameText1").innerHTML = eventName;*/
+
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/eventInfo.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+		
+		
+		
 	</script>
 		
       	<div class="panel">
