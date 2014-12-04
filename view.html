@@ -119,14 +119,22 @@
     };
 		map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
 		directionsDisplay.setMap(map);
+		
+	//Search Box
+    var markers = [];
+    var input =(document.getElementById('address-input'));
+
+    var searchBox = new google.maps.places.SearchBox((input));
 
 	function calcRoute() {
 
-		var start = document.getElementById('address-input').value;
-		var end = myCenter;
+		//var start = document.getElementById('address-input').value;
+		//var start = searchBox;
+		//var end = myCenter;
 		var request = {
-				origin: start,
-				destination: end,
+				//origin: start,
+				origin: searchBox,
+				destination: myCenter,
 				travelMode: google.maps.TravelMode.DRIVING
 				};
 		directionsService.route(request, function(response, status) {
