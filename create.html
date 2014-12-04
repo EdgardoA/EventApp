@@ -100,20 +100,20 @@
         </div>
       </div>				
     </div>
+	
+	<div class="row">
+      <div class="large-8 large-centered columns">
+        <label>Event Description</label>
+		<input type="text"; style=" height: 50px"; placeholder="Enter Event Description Here..." />
+     </div>
 
     <div class="row">
       <div class="large-8 large-centered columns">
         <label>Event Location</label>
         <input id ="pac-input"; type="text"; />
       </div>
-	  
-	<div class="row">
-      <div class="large-8 large-centered columns">
-        <label>Event Description</label>
-		<input type="text"; style=" height: 50px"; placeholder="Enter Event Description Here..." />
-      </div>
 
-      <script>
+  <script>
       var myCenter = new google.maps.LatLng(51.508742, -0.120850);
 
       function initialize()
@@ -202,7 +202,7 @@
     google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
-  <div id="googleMap" style="width:50%;height:500px; position: relative; left: 10%;"></div>
+  <div id="googleMap" style="width:50%;height:500px; position: relative; left: 25%;"></div>
 </div>
 </form>
 
