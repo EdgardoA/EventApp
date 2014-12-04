@@ -2,42 +2,42 @@
 <html class="no-js" lang="en">
 <head>
 
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=false"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=false"></script>
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EventUs</title>
-  <link rel="stylesheet" href="css/foundation.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <script src="js/vendor/modernizr.js"></script>
-</head>
+  	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<title>EventUs</title>
+  	<link rel="stylesheet" href="css/foundation.css" />
+  	<link rel="stylesheet" href="css/main.css" />
+  	<script src="js/vendor/modernizr.js"></script>
+	</head>
 
-<div class="header">
-  <a href="http://edgardoa.github.io/EventApp/"> 
-    <img src="https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/EventUs-NewLogo.png">
-  </a>
-  <div class="nav-menu">
-    <ul class="nav-buttons">
-      <li class="home-button"><a href="http://edgardoa.github.io/EventApp/index">Home</a></li>
-      <li class="create-button"><a href=#>Create</a></li>
-      <li class="logIn-button" data-reveal-id="LoginModal"><a href=#>Log In</a>
-        <div id="LoginModal" class="reveal-modal" data-reveal>
-          <form>
-            <div class="row">
-              <h2>Create An Account</h2>
-              <div class="large-4 columns">
-               <input type="text" placeholder="First Name" />
-              </div>
-              <div class="large-4 columns">
-               <input type="text" placeholder="Last Name" />
-              </div>
-              <div class="large-4 columns">
-               <input type="text" placeholder="Email" />
-              </div>
+	<div class="header">
+  		<a href="http://edgardoa.github.io/EventApp/"> 
+    		<img src="https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/EventUs-NewLogo.png">
+  		</a>
+  	<div class="nav-menu">
+    	<ul class="nav-buttons">
+      		<li class="home-button"><a href="http://edgardoa.github.io/EventApp/index">Home</a></li>
+      		<li class="create-button"><a href=#>Create</a></li>
+      		<li class="logIn-button" data-reveal-id="LoginModal"><a href=#>Log In</a>
+    		<div id="LoginModal" class="reveal-modal" data-reveal>
+          		<form>
+            		<div class="row">
+              			<h2>Create An Account</h2>
+              			<div class="large-4 columns">
+               				<input type="text" placeholder="First Name" />
+              			</div>
+              		<div class="large-4 columns">
+               			<input type="text" placeholder="Last Name" />
+              		</div>
+              		<div class="large-4 columns">
+               			<input type="text" placeholder="Email" />
+              		</div>
             </div>
             <div class="row">
-              <div class="large-4 columns">
-                <input type="text" placeholder="Desired Username" />
+            	  <div class="large-4 columns">
+            		<input type="text" placeholder="Desired Username" />
               </div>
               <div class="large-4 columns">
                 <input type="text" placeholder="Password" />
@@ -371,40 +371,9 @@
 </div>
 
 
-<style>
-    /* Image Designing Propoerties */
-    .thumb {
-        height: 75px;
-        border: 1px solid #000;
-        margin: 10px 5px 0 0;
-    }
-</style>
-
-<script type="text/javascript">
-    /* The uploader form */
-    $(function () {
-        $(":file").change(function () {
-            if (this.files && this.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = imageIsLoaded;
-                reader.readAsDataURL(this.files[0]);
-            }
-        });
-    });
-
-    function imageIsLoaded(e) {
-        $('#myImg').attr('src', e.target.result);
-        $('#yourImage').attr('src', e.target.result);
-    };
-
-</script>
 
 
-<input type='file' />
-</br><img id="myImg" src="#" alt="your image" height=200 width=100>
 
-<!---
 <div class="row">
 	<div class="small-8 small-centered columns">
 
@@ -416,6 +385,7 @@
     	  <div class="large-12 columns">
         <div class="panel">
         
+
 
 <li><button class="small button" data-reveal-id="myModal">Promote</button>
  <div id="myModal" class="reveal-modal" data-reveal>
