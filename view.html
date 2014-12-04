@@ -131,12 +131,13 @@
 
 	function calcRoute() {
 
-		//var start = document.getElementById('address-input').value;
+		var start = document.getElementById('address-input').value;
 		//var start = searchBox;
+		
 		//var end = myCenter;
 		var request = {
-				//origin: start,
-				origin: input,
+				origin: start,
+				//origin: input,
 				destination: myCenter,
 				travelMode: google.maps.TravelMode.DRIVING
 				};
