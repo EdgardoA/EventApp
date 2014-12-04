@@ -92,7 +92,8 @@
 			</div>
 			
 			<div class="large-4 medium-3 columns">
-				<input id="address-input"; type="search" placeholder="Enter your location here ..." onsearch="calcRoute()">
+				<label><b>Directions</b></label>
+				<input id="address-input"; type="text" placeholder="Enter your location here ..." autocomplete="off">
 			</div>
 		
 		
@@ -125,6 +126,8 @@
     var input =(document.getElementById('address-input'));
 
     var searchBox = new google.maps.places.SearchBox((input));
+	
+	google.maps.event.addListener(searchBox, 'places_changed', calcRoute());
 
 	function calcRoute() {
 
