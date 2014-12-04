@@ -78,11 +78,19 @@
     
 	<form>
 	
+		<!-- Event Data -->	
+		<div class="row">
+			<div class="large-12 columns">
+				<label><b>Event Description</b></label>
+				<p>It's party time! Join me to celebrate my birthday by partying like there is no tomorrow</p>
+			    <p> Feel free to bring food or drinks! </p>
+			</div>
+		</div>
+		
 		<div class="row">
 			<div class="large-12 columns">
 				<label><b>Event Date</b></label>
-				<pre>12/15/14                          It's party time! Join me to celebrate my birthday by partying like there is no tomorrow</pre>
-			    <pre>                                  Feel free to bring food or drinks! </pre>
+				<p>12/15/14</p>
 			</div>
 		</div>
 		
@@ -91,14 +99,17 @@
 				<label><b>Event Location</b></label>
 				<p>1864 Holleman Dr. </p>		
 			</div>
-			
+		</div>
+		
+		<div class="row">
 			<div class="large-4 medium-3 columns">
 				<label><b>Directions</b></label>
 				<input id="address-input" type="text" placeholder="Enter your location here ..." autocomplete="off">
 			</div>
+		</div>
 		
-		
-	<script>
+		<!-- Google Map Script -->	
+		<script>
 	     var myCenter = new google.maps.LatLng(30.592175, -96.338701);
 		 var directionsDisplay;
 		 var directionsService = new google.maps.DirectionsService();
@@ -160,39 +171,41 @@
 
     }
     </script>
-			</head>
-				<div id="googleMap" style="width:73%; height:300px; position: relative; left: 25%;"></div>
+		
+		<!-- Google Map -->	
+    	<div class="row">
+			<div class="large-12 large-centered columns">
+				<div id="googleMap" style="width:95%; height:300px; position: inherit; left: 0%;"></div>
 			</div>
 		</div>
-				  
-		<!-- Donation Radio Button & Slider -->	
+		
+		<!-- RSVP Radio Button-->	
 		<div class="row">
-			<div class="large-6 medium-6 columns">
+			<div class="large-12 large-centered columns">
 				<label><b>RSVP</b></label>
 				<input type="radio" name="donation" value="Yes" id="donationYes"><label for="donationYes">Yes</label>
 				<input type="radio" name="donation" value="No" id="donationYes"><label for="donationNo">No</label>
 			</div>
+		</div>
 			
-			<div class="row">
-				<div class="large-12 columns">
-					<p><b>Feel free to donate:</b></p>
+		<div class="row">
+			<div class="large-12 columns">
+				<p><b>Feel free to donate:</b></p>
+			</div>
+		</div>
+		
+		<!-- Donation Slider -->		
+		<div class="row">
+			<div class="small-8 medium-9 columns">
+				$<span id="sliderOutput3"></span>
+				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput3; step: 5;">
+					<span class="range-slider-handle" role="slider" tabindex="0"></span>
+					<span class="range-slider-active-segment"></span>
 				</div>
 			</div>
-			
-			<div class="row">
-  				<div class="small-8 medium-9 columns">
-				$<span id="sliderOutput3"></span>
-    			<div class="range-slider" data-slider data-options="display_selector: #sliderOutput3; step: 5;">
-      				<span class="range-slider-handle" role="slider" tabindex="0"></span>
-      				<span class="range-slider-active-segment"></span>
-    			</div>
-  				</div>
-  				<div class="small-2 medium-1 columns">
-
-  				</div>
-			</div>
+		</div>
 							  
-		<!-- Button -->
+		<!-- Donation Button -->
 			<div class="row">
 			  	<div class="small-2 columns">
 					<a href="http://edgardoa.github.io/EventApp/payment.html" class="small radius button">Donate</a>
@@ -201,8 +214,6 @@
 
 		</div>
 	  
-		
-
 		</form>
 
     <script src="js/vendor/jquery.js"></script>
