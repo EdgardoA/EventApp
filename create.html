@@ -370,11 +370,25 @@
 </div>
 </div>
 
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit">
+</form>
 
+<!---
 <div class="row">
 	<div class="small-8 small-centered columns">
-		<li><input type="reset" class="small button" value="Clear" /></li>
-		<li><a href="#" class="small button">Add Photo</a></li>
+
+		<li><button href="#" class="small button" data-reveal-id="photoModal">Add Photo</button>
+
+		<div id="photoModal" class="reveal-modal" data-reveal>
+	     <h2>Login to invite your friends!</h2>
+    	 <div class="row">
+    	  <div class="large-12 columns">
+        <div class="panel">
+        
+
 <li><button class="small button" data-reveal-id="myModal">Promote</button>
  <div id="myModal" class="reveal-modal" data-reveal>
    <h2>Create Promotional Tweet</h2>
@@ -385,7 +399,7 @@
 </li>
 
 </ul>	
-	
+	--->
 </div>
 </div>
 
