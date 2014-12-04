@@ -136,17 +136,6 @@
     var marker = new google.maps.Marker({position:myCenter,icon:'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png'});
     marker.setMap(map);
 
-    //Marker-Icon Image
-    var infowindow = new google.maps.InfoWindow({content:"We can put info of the event here as well!"});
-    infowindow.open(map,marker);
-
-    //Info Window that opens when clicking on marker
-    //var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker"});
-    var infowindowClick = new google.maps.InfoWindow({content:"Or we can do it by cliking on marker"}); // background-color = #B2D1FF, max-width = 80, max-height = 120}
-
-    //Open on click
-    google.maps.event.addListener(marker, 'click', function() {infowindowClick.open(map,marker);});
-
     //Search Box
     var markers = [];
     var input =(document.getElementById('pac-input'));
