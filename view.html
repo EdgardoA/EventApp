@@ -101,67 +101,67 @@
 
 		<!-- Google Map Script -->	
 		<script>
-	     var myCenter = new google.maps.LatLng(30.592175, -96.338701);
-		 var directionsDisplay;
-		 var directionsService = new google.maps.DirectionsService();
-		 var map;
+			 var myCenter = new google.maps.LatLng(30.592175, -96.338701);
+			 var directionsDisplay;
+			 var directionsService = new google.maps.DirectionsService();
+			 var map;
 
-      function initialize()
-      {
+		  function initialize()
+		  {
 	  
-		directionsDisplay = new google.maps.DirectionsRenderer();
+			directionsDisplay = new google.maps.DirectionsRenderer();
 	  
-        var mapProp = {
-          center:myCenter,
-          zoom: 19,
-          mapTypeId:google.maps.MapTypeId.TERRAIN
+			var mapProp = {
+			  center:myCenter,
+			  zoom: 19,
+			  mapTypeId:google.maps.MapTypeId.TERRAIN
 
-      //mapTypeId:google.maps.MapTypeId.HYBRID
-      //mapTypeId:google.maps.MapTypeId.SATELLITE
-      //mapTypeId:google.maps.MapTypeId.HYBRID
-      //mapTypeId:google.maps.MapTypeId.TERRAIN
-    };
-		map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		directionsDisplay.setMap(map);
+		  //mapTypeId:google.maps.MapTypeId.HYBRID
+		  //mapTypeId:google.maps.MapTypeId.SATELLITE
+		  //mapTypeId:google.maps.MapTypeId.HYBRID
+		  //mapTypeId:google.maps.MapTypeId.TERRAIN
+		};
+			map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
+			directionsDisplay.setMap(map);
 		
-	//Search Box
-    var markers = [];
-    var input =(document.getElementById('address-input'));
+		//Search Box
+		var markers = [];
+		var input =(document.getElementById('address-input'));
 
-    var searchBox = new google.maps.places.SearchBox((input));
+		var searchBox = new google.maps.places.SearchBox((input));
 	
-	google.maps.event.addListener(searchBox, 'places_changed', calcRoute());
+		google.maps.event.addListener(searchBox, 'places_changed', calcRoute());
 	
 			
-    //Icon Image
-    var marker = new google.maps.Marker({position:myCenter,icon:'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png'});
-    marker.setMap(map);
+		//Icon Image
+		var marker = new google.maps.Marker({position:myCenter,icon:'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png'});
+		marker.setMap(map);
 
-	map.setZoom(19);
+		map.setZoom(19);
 
-	function calcRoute() {
+		function calcRoute() {
 
-		var start = document.getElementById('address-input').value;
-		//var start = searchBox;
+			var start = document.getElementById('address-input').value;
+			//var start = searchBox;
 		
-		//var end = myCenter;
-		var request = {
-				origin: start,
-				//origin: input,
-				destination: myCenter,
-				travelMode: google.maps.TravelMode.DRIVING
-				};
-		directionsService.route(request, function(response, status) {
-			if ( status == google.maps.DirectionsStatus.OK) {
-				directionsDisplay.setDirections(response);
-				}
-			});
-		}	
+			//var end = myCenter;
+			var request = {
+					origin: start,
+					//origin: input,
+					destination: myCenter,
+					travelMode: google.maps.TravelMode.DRIVING
+					};
+			directionsService.route(request, function(response, status) {
+				if ( status == google.maps.DirectionsStatus.OK) {
+					directionsDisplay.setDirections(response);
+					}
+				});
+			}	
 	
 
 
-    }
-    </script>
+		}
+    	</script>
 		
 		<!-- Google Map -->	
     	<div class="row">
