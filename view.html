@@ -129,6 +129,13 @@
     var searchBox = new google.maps.places.SearchBox((input));
 	
 	google.maps.event.addListener(searchBox, 'places_changed', calcRoute());
+	
+			
+    //Icon Image
+    var marker = new google.maps.Marker({position:myCenter,icon:'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png'});
+    marker.setMap(map);
+
+	map.setZoom(19);
 
 	function calcRoute() {
 
@@ -147,14 +154,9 @@
 				directionsDisplay.setDirections(response);
 				}
 			});
-	}	
+		}	
 	
-		
-    //Icon Image
-    var marker = new google.maps.Marker({position:myCenter,icon:'https://raw.githubusercontent.com/EdgardoA/EventApp/gh-pages/img/MapMarkers/House-48.png'});
-    marker.setMap(map);
 
-		map.setZoom(19);
 
     }
     </script>
